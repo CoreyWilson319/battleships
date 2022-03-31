@@ -3,21 +3,21 @@ function Ship(length) {
 	this.sunk = false;
 	this.locations = [];
 
-	this.addLocation = (row, column) => {
+	this.addLocation = (row, col) => {
 		if (this.locations.length + 1 > this.length) {
 			throw "All available placements for the ship have already been made.";
 		} else {
-			this.locations.push({ row, column, hit: false });
+			this.locations.push({ row, col, hit: false });
 			return this.locations[this.locations.length - 1];
 		}
 	};
 
-	this.hit = (row, column) => {
+	this.hit = (row, col) => {
 		let match = null;
 		this.locations.forEach((location) => {
 			if (
 				location["row"] === row &&
-				location["column"] === column &&
+				location["col"] === col &&
 				location["hit"] === false
 			) {
 				location["hit"] = true;
