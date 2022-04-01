@@ -24,7 +24,7 @@ function Ship(length) {
 				match = location;
 			}
 		});
-		// this.sinkCheck();
+		this.sinkCheck();
 		return match ? match : false;
 	};
 
@@ -42,6 +42,7 @@ function Ship(length) {
 		if (foundNotHit > 0) {
 			return false;
 		} else if (foundHit === this.length && foundNotHit === 0) {
+			this.sunk = true;
 			return true;
 		}
 	};

@@ -52,13 +52,18 @@ function Gameboard(grid) {
 	};
 
 	this.checkForActiveShips = () => {
-		// Loop through grid
-		// Check through each ship active
-		// if at least 1 ship is alive return true
-		// return false if there are no remaining ships
+		// console.log(getGrid());
+		for (let row in this.grid) {
+			for (let col in this.grid[row]) {
+				if (this.grid[row][col]) {
+					if (this.getGrid()[row][col].sunk === false) return true;
+				}
+			}
+		}
+		return false;
 	};
 
-	return { getGrid, placeShip, recieveAttack, misses };
+	return { getGrid, placeShip, recieveAttack, misses, checkForActiveShips };
 }
 
 module.exports = Gameboard;

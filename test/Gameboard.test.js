@@ -119,17 +119,17 @@ test("Check for active ships when 1 remains", () => {
 });
 test("Check for active ships when 1 should remain and 1 sunk", () => {
 	let newBoard = Gameboard(4);
-	let shipA = Ship(1);
-	let shipB = Ship(1);
+	let shipA = new Ship(1);
+	let shipB = new Ship(1);
 	newBoard.placeShip(shipA, 0, 0);
 	newBoard.placeShip(shipB, 0, 1);
 	newBoard.recieveAttack(0, 0);
 	expect(newBoard.checkForActiveShips()).toEqual(true);
 });
 test("Check for active ships when none should remain", () => {
-	let newBoard = Gameboard(4);
-	let shipA = Ship(1);
-	let shipB = Ship(1);
+	let newBoard = new Gameboard(4);
+	let shipA = new Ship(1);
+	let shipB = new Ship(1);
 	newBoard.placeShip(shipA, 0, 0);
 	newBoard.placeShip(shipB, 0, 1);
 	newBoard.recieveAttack(0, 0);
