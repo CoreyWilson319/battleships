@@ -46,10 +46,6 @@ function Ship(length) {
 			return true;
 		}
 	};
-	// iterate through all locations
-	// if every hit value is true
-	// ship is sunk
-	// else do nothing ship is not sunk and should remain false
 
 	return this;
 }

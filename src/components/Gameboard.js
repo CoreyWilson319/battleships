@@ -3,7 +3,9 @@ const Ship = require("./Ship");
 function Gameboard(grid) {
 	this.grid = {};
 	this.misses = [];
+	this.size;
 	this.createGrid = (numberOfRows) => {
+		this.size = numberOfRows;
 		for (let i = 0; i < numberOfRows; i++) {
 			this.grid[i] = {};
 			for (let k = 0; k < numberOfRows; k++) {
@@ -52,7 +54,6 @@ function Gameboard(grid) {
 	};
 
 	this.checkForActiveShips = () => {
-		// console.log(getGrid());
 		for (let row in this.grid) {
 			for (let col in this.grid[row]) {
 				if (this.grid[row][col]) {
@@ -63,7 +64,7 @@ function Gameboard(grid) {
 		return false;
 	};
 
-	return { getGrid, placeShip, recieveAttack, misses, checkForActiveShips };
+	return this;
 }
 
 module.exports = Gameboard;
