@@ -31,7 +31,29 @@ test("AI Turn works, (Random Turn)", () => {
 
 test("AI won't make duplicate attacks", () => {
 	let p1 = new Player();
-	let p2Board = new Gameboard(2);
+	let p2Board = new Gameboard(5);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
+	p1.takeAITurn(p2Board);
 	p1.takeAITurn(p2Board);
 	p1.takeAITurn(p2Board);
 	p1.takeAITurn(p2Board);
